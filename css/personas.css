@@ -1,0 +1,259 @@
+/* css/personas.css */
+.hero-personas::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/personas-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Introducción */
+.personas-intro {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.intro-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Personas destacadas */
+.personas-destacadas {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.subsection-title {
+  text-align: center;
+  color: var(--color-primario);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.subsection-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--color-primario);
+  margin: 0.5rem auto 1.5rem;
+}
+
+.subsection-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.persona-card {
+  background: white;
+  border-radius: var(--borde-redondeado);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+  display: flex;
+  flex-direction: column;
+}
+
+.persona-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.persona-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.persona-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transicion);
+}
+
+.persona-card:hover .persona-image img {
+  transform: scale(1.05);
+}
+
+.persona-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.persona-content h4 {
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.persona-rol {
+  color: var(--color-primario);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.persona-bio {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.persona-logros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.logro-tag {
+  background-color: var(--color-claro);
+  color: var(--color-primario);
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Colaboradores */
+.colaboradores {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.colaboradores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.colaborador-card {
+  background: white;
+  border-radius: var(--borde-redondeado);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+}
+
+.colaborador-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.colaborador-image {
+  height: 200px;
+}
+
+.colaborador-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.colaborador-content {
+  padding: 1.5rem;
+}
+
+.colaborador-content h4 {
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+}
+
+.colaborador-rol {
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.colaborador-bio {
+  line-height: 1.6;
+}
+
+/* Memoria */
+.memoria-homenaje {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.memoria-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.memoria-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.memoria-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.memoria-nombres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.memoria-nombres span {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .personas-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .personas-grid,
+  .colaboradores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .persona-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memoria-nombres {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .memoria-nombres span {
+    width: 100%;
+    text-align: center;
+  }
+}

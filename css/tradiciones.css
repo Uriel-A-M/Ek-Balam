@@ -1,0 +1,261 @@
+/* css/tradiciones.css */
+.hero-tradiciones::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/tradiciones-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Introducción */
+.tradiciones-intro {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.intro-image img {
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra);
+  width: 100%;
+  height: auto;
+}
+
+/* Grid de tradiciones */
+.tradiciones-grid {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.tradicion-card {
+  display: flex;
+  background: white;
+  border-radius: var(--borde-redondeado);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  margin-bottom: 3rem;
+  transition: var(--transicion);
+}
+
+.tradicion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.tradicion-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.tradicion-image {
+  flex: 1;
+}
+
+.tradicion-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tradicion-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.tradicion-content h3 {
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.tradicion-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.tradicion-details {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.tradicion-details li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-secundario);
+}
+
+.tradicion-details i {
+  color: var(--color-primario);
+  width: 20px;
+  text-align: center;
+}
+
+/* Calendario */
+.calendario-tradiciones {
+  background-color: var(--color-claro);
+  padding: 4rem 1rem;
+}
+
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto 0;
+}
+
+.mes-tradicion {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra);
+}
+
+.mes-tradicion h3 {
+  color: var(--color-primario);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-primario);
+}
+
+.evento {
+  margin-bottom: 1.5rem;
+}
+
+.evento h4 {
+  color: var(--color-secundario);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Galería */
+.galeria-tradiciones {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.galeria-item {
+  position: relative;
+  border-radius: var(--borde-redondeado);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+}
+
+.galeria-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.galeria-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* CTA */
+.cta-tradiciones {
+  background-color: var(--color-primario);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-content .btn {
+  background-color: white;
+  color: var(--color-primario);
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.cta-content .btn:hover {
+  background-color: var(--color-claro);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tradicion-card,
+  .tradicion-card.reverse {
+    flex-direction: column;
+  }
+  
+  .tradicion-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tradicion-content {
+    padding: 1.5rem;
+  }
+  
+  .cta-content h3 {
+    font-size: 1.5rem;
+  }
+}
+  

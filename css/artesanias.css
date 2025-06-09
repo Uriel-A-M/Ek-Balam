@@ -1,0 +1,590 @@
+/* En artesanias.css */
+:root {
+  --artesania-primario: #2e7d32;
+  --artesania-secundario: #4caf50;
+}
+
+/* Luego usa estas nuevas variables en tus estilos */
+.section-title {
+  color: var(--artesania-primario);
+}
+
+/* El resto del CSS permanece exactamente igual */
+/* Solo cambian las variables de color arriba */
+
+/* Estilos base */
+.hero-artesanias::before {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
+              url('../images/artesania-bg.jpg') center/cover no-repeat;
+  background-attachment: fixed;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.artesania-section {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  animation: slideUp 0.8s ease-out;
+}
+
+/* ... (todo el resto del CSS se mantiene igual) ... */
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sección introductoria */
+.intro-artesania {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--color-secundario);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.artesania-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.artesania-text {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--color-texto);
+}
+
+.artesania-text p {
+  margin-bottom: 1.8rem;
+}
+
+.artesania-main-img {
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra-destacada);
+  width: 100%;
+  height: auto;
+  transition: var(--transicion);
+  transform: perspective(1000px) rotateY(5deg);
+}
+
+.artesania-main-img:hover {
+  transform: perspective(1000px) rotateY(0);
+  box-shadow: var(--sombra-hover);
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Categorías de artesanías */
+.categorias-artesania {
+  margin: 5rem 0;
+}
+
+.categoria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.categoria-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra);
+  text-align: center;
+  transition: var(--transicion);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.categoria-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--sombra-destacada);
+}
+
+.categoria-icon {
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+}
+
+.categoria-card h3 {
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.categoria-card p {
+  color: var(--color-texto);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.btn-mas {
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+  background: var(--color-primario);
+  color: white;
+  border-radius: var(--borde-redondeado-peq);
+  text-decoration: none;
+  transition: var(--transicion);
+  font-weight: 500;
+}
+
+.btn-mas:hover {
+  background: var(--color-secundario);
+  transform: translateY(-2px);
+}
+
+/* Secciones detalladas */
+.artesania-detalle {
+  margin: 5rem 0;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.artesania-detalle:nth-child(odd) {
+  background: var(--color-claro);
+}
+
+.detalle-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.detalle-content.reverse {
+  direction: rtl;
+}
+
+.detalle-content.reverse > * {
+  direction: ltr;
+}
+
+.detalle-text {
+  padding: 1rem;
+}
+
+.detalle-text h3 {
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.detalle-text h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--color-secundario);
+}
+
+.detalle-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.artesania-lista {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.artesania-lista li {
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.artesania-lista li::before {
+  content: '•';
+  color: var(--color-primario);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.proceso-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--borde-redondeado-peq);
+  box-shadow: var(--sombra);
+  margin-top: 1.5rem;
+}
+
+.proceso-box h4 {
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.proceso-box ol {
+  padding-left: 1.5rem;
+}
+
+.proceso-box li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  counter-increment: step-counter;
+}
+
+.proceso-box li::before {
+  content: counter(step-counter);
+  color: white;
+  background: var(--color-primario);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  position: absolute;
+  left: -1.8rem;
+}
+
+.detalle-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra-destacada);
+  transition: var(--transicion);
+}
+
+.detalle-image img:hover {
+  transform: scale(1.02);
+}
+
+/* Testimonios */
+.testimonio-artesania {
+  margin: 6rem 0;
+  position: relative;
+}
+
+.testimonio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--color-claro);
+  padding: 3rem;
+  border-radius: var(--borde-redondeado);
+}
+
+blockquote {
+  position: relative;
+  padding: 1.5rem;
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 5rem;
+  color: var(--color-primario);
+  opacity: 0.2;
+  position: absolute;
+  left: -1rem;
+  top: -2rem;
+  font-family: serif;
+  line-height: 1;
+}
+
+blockquote p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: var(--color-oscuro);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+cite {
+  display: block;
+  font-weight: 600;
+  color: var(--color-primario);
+  font-style: normal;
+  font-size: 1.1rem;
+}
+
+.testimonio-image {
+  position: relative;
+}
+
+.testimonio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--borde-redondeado);
+  box-shadow: var(--sombra-destacada);
+}
+
+.testimonio-badge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: var(--color-primario);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--borde-redondeado-peq);
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: var(--sombra);
+}
+
+/* Galería */
+.galeria-artesania {
+  margin: 6rem 0;
+}
+
+.masonry-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--borde-redondeado);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: var(--transicion);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--sombra-hover);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transicion-lenta);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  opacity: 0;
+  transition: var(--transicion);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* CTA */
+.cta-artesania {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: var(--borde-redondeado);
+  text-align: center;
+  margin: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-artesania::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+  animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-artesania h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-artesania p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  border-radius: var(--borde-redondeado-peq);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transicion);
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--color-primario);
+  box-shadow: var(--sombra);
+}
+
+.btn-primary:hover {
+  background: var(--color-claro);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .detalle-content,
+  .testimonio-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .detalle-image img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .artesania-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-artesania h3 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .artesania-section {
+    padding: 0 1rem;
+  }
+  
+  .testimonio-content {
+    padding: 2rem 1rem;
+  }
+  
+  blockquote p {
+    font-size: 1.1rem;
+  }
+  
+  .masonry-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-artesania {
+    padding: 3rem 1rem;
+  }
+  
+  .cta-artesania h3 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-artesania p {
+    font-size: 1rem;
+  }
+}
