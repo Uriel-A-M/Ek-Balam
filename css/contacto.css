@@ -383,3 +383,15 @@
       padding: 1.5rem;
     }
   }
+  .error-msg {
+  color: #f44336;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.input-error {
+  border: 2px solid #f44336 !important;
+  outline: none;
+}
+

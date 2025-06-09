@@ -64,23 +64,29 @@
           </div>
         </div>
         
-        <form class="formulario-contacto" id="miFormulario" action="https://formspree.io/f/xvgrkbgy" method="POST">
-    <!-- Campos del formulario -->
+<form class="formulario-contacto" id="miFormulario" action="https://formspree.io/f/xvgrkbgy" method="POST">
+    <!-- Nombre -->
     <div class="form-group">
         <label for="nombre">Nombre completo</label>
         <input type="text" id="nombre" name="nombre" required>
+        <span class="error-msg" id="error-nombre"></span>
     </div>
-    
+
+    <!-- Email -->
     <div class="form-group">
         <label for="email">Correo electrónico</label>
         <input type="email" id="email" name="email" required>
+        <span class="error-msg" id="error-email"></span>
     </div>
-    
+
+    <!-- Teléfono -->
     <div class="form-group">
         <label for="telefono">Teléfono (opcional)</label>
         <input type="tel" id="telefono" name="telefono">
+        <span class="error-msg" id="error-telefono"></span>
     </div>
-    
+
+    <!-- Asunto -->
     <div class="form-group">
         <label for="asunto">Asunto</label>
         <select id="asunto" name="asunto" required>
@@ -92,21 +98,27 @@
             <option value="proyectos">Información sobre proyectos</option>
             <option value="otro">Otro</option>
         </select>
+        <span class="error-msg" id="error-asunto"></span>
     </div>
-    
+
+    <!-- Mensaje -->
     <div class="form-group">
         <label for="mensaje">Mensaje</label>
         <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <span class="error-msg" id="error-mensaje"></span>
     </div>
-    
+
+    <!-- Ocultos -->
     <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
     <input type="hidden" name="_language" value="es">
     <input type="text" name="_gotcha" style="display:none">
-    
+
+    <!-- Botón -->
     <button type="submit" class="btn-enviar">
         Enviar mensaje <i class="fas fa-paper-plane"></i>
     </button>
 </form>
+
 
     
         <!-- Popup de agradecimiento -->
