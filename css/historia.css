@@ -216,7 +216,11 @@
     padding: 2rem;
     color: var(--color-texto);
   }
-  
+  .testimonios-historia .section-subtitle {
+  color: var(--color-texto-claro); /* Subtítulo más tenue o blanco */
+  font-size: 1.2rem;
+  font-style: italic;
+}
   .testimonio-text blockquote {
     font-style: italic;
     font-size: 1.1rem;
