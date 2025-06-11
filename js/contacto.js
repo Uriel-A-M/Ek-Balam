@@ -57,7 +57,7 @@ document.getElementById('miFormulario').addEventListener('submit', async (e) => 
 
   // Envío con Formspree
   try {
-    const response = await fetch('https://formspree.io/f/xvgrkbgy', {
+    const response = await fetch('https://formspree.io/f/mblyoolg', {
       method: 'POST',
       body: new FormData(e.target),
       headers: { 'Accept': 'application/json' }
