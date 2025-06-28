@@ -271,71 +271,246 @@
 
   
   /* Testimonios */
-  .testimonios-historia {
-    padding: 4rem 1rem;
-    background-color: var(--color-primario);
-    color: white;
-  }
-  
-  .testimonios-container {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .testimonio-card {
-    display: flex;
-    background: white;
-    border-radius: var(--borde-redondeado);
-    overflow: hidden;
-    margin-bottom: 2rem;
-    box-shadow: var(--sombra);
-  }
-  
-  .testimonio-card.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .testimonio-text {
-    flex: 2;
-    padding: 2rem;
-    color: var(--color-texto);
-  }
-  .testimonios-historia .section-subtitle {
-  color: var(--color-texto-claro); /* Subtítulo más tenue o blanco */
+/* TESTIMONIOS HISTÓRICOS - Versión corregida */
+.testimonios-historicos {
+  padding: 6rem 1rem;
+  background-color: var(--color-claro);
+  position: relative;
+}
+
+.testimonios-historicos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--color-secundario);
+  border-radius: 2px;
+}
+
+.section-subtitle {
   font-size: 1.2rem;
+  color: var(--color-texto);
   font-style: italic;
 }
-  .testimonio-text blockquote {
-    font-style: italic;
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-  
-  .testimonio-text blockquote::before {
-    content: '"';
-    font-size: 4rem;
-    color: var(--color-primario);
-    opacity: 0.2;
-    position: absolute;
-    left: -1rem;
-    top: -1.5rem;
-  }
-  
-  .testimonio-text cite {
-    font-weight: 600;
-    color: var(--color-primario);
-  }
-  
-  .testimonio-image {
-    flex: 1;
-  }
-  
-  .testimonio-image img {
+
+/* Contenedor principal */
+.testimonios-duo {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+/* Tarjeta de testimonio */
+.testimonio-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 48%;
+  min-width: 300px;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.testimonio-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Sección de imagen */
+.testimonio-media {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.vintage-filter {
+  filter: sepia(20%) contrast(1.1) brightness(0.9);
+}
+
+.testimonio-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.testimonio-card:hover .testimonio-media img {
+  transform: scale(1.05);
+}
+
+/* Elementos decorativos */
+.decoration-circle {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(212, 167, 106, 0.1);
+  border: 15px solid rgba(212, 167, 106, 0.05);
+}
+
+.author-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--color-secundario);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenido del testimonio */
+.testimonio-content {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-decoration {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  opacity: 0.3;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+}
+
+/* Pie de testimonio */
+.testimonio-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 0.3rem;
+}
+
+.author-details {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+.historical-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--color-texto);
+}
+
+.historical-marker i {
+  color: var(--color-secundario);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .testimonio-card,
+  .testimonio-card.reverse {
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 600px;
   }
+  
+  .testimonio-media {
+    min-height: 250px;
+  }
+  
+  .decoration-circle {
+    display: none; /* Ocultamos el círculo en móviles */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonios-historicos {
+    padding: 4rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonio-content {
+    padding: 1.5rem;
+  }
+  
+  .author-name {
+    font-size: 1.1rem;
+  }
+  
+  .author-details {
+    font-size: 0.8rem;
+  }
+}
   
   /* Responsive */
   @media (max-width: 992px) {
