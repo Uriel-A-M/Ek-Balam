@@ -313,23 +313,39 @@
   font-style: italic;
 }
 
-/* Contenedor principal */
+
+/* Contenedor principal - Cambio clave para responsive */
 .testimonios-duo {
   display: flex;
-  gap: 2.5rem;
+  flex-direction: row; /* Horizontal en desktop */
+  flex-wrap: wrap; /* Permite el salto de línea */
+  gap: 2rem;
   justify-content: center;
 }
 
 /* Tarjeta de testimonio */
 .testimonio-card {
   display: flex;
+  flex-direction: column; /* Siempre columna en móvil */
   background: white;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 48%;
-  min-width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%; /* Ocupa todo el ancho en móvil */
+  max-width: 500px; /* Ancho máximo para mantener legibilidad */
+  margin-bottom: 2rem;
+}
+
+/* Desktop - Ancho del 48% para mostrar dos por fila */
+@media (min-width: 992px) {
+  .testimonio-card {
+    width: calc(50% - 1rem); /* 48% menos el gap */
+    flex-direction: row; /* Horizontal en desktop */
+  }
+  
+  .testimonio-card.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .testimonio-card:hover {
