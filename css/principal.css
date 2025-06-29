@@ -1,0 +1,213 @@
+/* Contenedor principal - Cambio clave para responsive */
+.testimonios-duo {
+  display: flex;
+  flex-direction: row; /* Horizontal en desktop */
+  flex-wrap: wrap; /* Permite el salto de línea */
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Tarjeta de testimonio */
+.testimonio-card {
+  display: flex;
+  flex-direction: column; /* Siempre columna en móvil */
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%; /* Ocupa todo el ancho en móvil */
+  max-width: 500px; /* Ancho máximo para mantener legibilidad */
+  margin-bottom: 2rem;
+}
+
+/* Desktop - Ancho del 48% para mostrar dos por fila */
+@media (min-width: 992px) {
+  .testimonio-card {
+    width: calc(50% - 1rem); /* 48% menos el gap */
+    flex-direction: row; /* Horizontal en desktop */
+  }
+  
+  .testimonio-card.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.testimonio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.testimonio-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Sección de imagen */
+.testimonio-media {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.vintage-filter {
+  filter: sepia(20%) contrast(1.1) brightness(0.9);
+}
+
+.testimonio-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.testimonio-card:hover .testimonio-media img {
+  transform: scale(1.05);
+}
+
+/* Elementos decorativos */
+.decoration-circle {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: rgba(212, 167, 106, 0.1);
+  border: 15px solid rgba(212, 167, 106, 0.05);
+}
+
+.author-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--color-secundario);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Contenido del testimonio */
+.testimonio-content {
+  flex: 1;
+  padding: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-decoration {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  opacity: 0.3;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-texto);
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+  font-style: italic;
+}
+
+/* Pie de testimonio */
+.testimonio-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed rgba(0,0,0,0.1);
+  padding-top: 1.5rem;
+}
+
+.author-info {
+  flex: 1;
+}
+
+.author-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  margin-bottom: 0.3rem;
+}
+
+.author-details {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+.historical-marker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  color: var(--color-texto);
+}
+
+.historical-marker i {
+  color: var(--color-secundario);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .testimonio-card,
+  .testimonio-card.reverse {
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .testimonio-media {
+    min-height: 250px;
+  }
+  
+  .decoration-circle {
+    display: none; /* Ocultamos el círculo en móviles */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonios-historicos {
+    padding: 4rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonio-content {
+    padding: 1.5rem;
+  }
+  
+  .author-name {
+    font-size: 1.1rem;
+  }
+  
+  .author-details {
+    font-size: 0.8rem;
+  }
+}
