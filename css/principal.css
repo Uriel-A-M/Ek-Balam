@@ -211,3 +211,123 @@ blockquote {
     font-size: 0.8rem;
   }
 }
+
+/* Contenedor principal de Hyvor Talk */
+hyvor-talk-comments {
+  display: block;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Título de la sección de comentarios */
+.hyvor-talk-view-title {
+  font-size: 2rem;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hyvor-talk-view-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--color-secundario);
+}
+
+/* Contenedor de comentarios */
+.hyvor-talk-embed {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Cabecera */
+.hyvor-talk-embed-header {
+  background-color: var(--color-primario) !important;
+  color: white !important;
+  padding: 1rem 1.5rem !important;
+}
+
+/* Botones */
+.hyvor-talk-button {
+  background-color: var(--color-secundario) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+}
+
+.hyvor-talk-button:hover {
+  background-color: var(--color-secundario-claro) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Inputs y textarea */
+.hyvor-talk-input, 
+.hyvor-talk-textarea {
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  border-radius: 4px !important;
+  padding: 0.8rem !important;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Comentarios individuales */
+.hyvor-talk-comment {
+  border-bottom: 1px dashed rgba(0,0,0,0.1) !important;
+  padding: 1.5rem !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.hyvor-talk-comment:hover {
+  background-color: rgba(0,0,0,0.02) !important;
+}
+
+/* Avatar de usuario */
+.hyvor-talk-user-avatar img {
+  border-radius: 50% !important;
+  border: 2px solid var(--color-secundario) !important;
+}
+
+/* Nombre de usuario */
+.hyvor-talk-user-name {
+  color: var(--color-primario) !important;
+  font-weight: 600 !important;
+}
+
+/* Tiempo del comentario */
+.hyvor-talk-comment-time {
+  color: var(--color-texto-claro) !important;
+  font-size: 0.85rem !important;
+}
+
+/* Contador de comentarios */
+.hyvor-talk-comments-count {
+  color: var(--color-primario) !important;
+  font-weight: 600 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  hyvor-talk-comments {
+    padding: 0 1rem;
+    margin: 3rem auto;
+  }
+  
+  .hyvor-talk-view-title {
+    font-size: 1.5rem;
+  }
+  
+  .hyvor-talk-comment {
+    padding: 1rem !important;
+  }
+}
