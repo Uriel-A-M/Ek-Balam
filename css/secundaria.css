@@ -551,3 +551,158 @@ blockquote {
       grid-template-columns: 1fr;
     }
   }
+/* CTA */
+.cta-artesania {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: var(--borde-redondeado);
+  text-align: center;
+  margin: 6rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-artesania::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  transform: rotate(30deg);
+  animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  100% { transform: translateX(100%) rotate(30deg); }
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-artesania h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-artesania p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2.2rem;
+  border-radius: var(--borde-redondeado-peq);
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transicion);
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  background: white;
+  color: var(--color-primario);
+  box-shadow: var(--sombra);
+}
+
+.btn-primary:hover {
+  background: var(--color-claro);
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-hover);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .detalle-content,
+  .testimonio-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .detalle-image img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .artesania-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .cta-artesania h3 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .artesania-section {
+    padding: 0 1rem;
+  }
+  
+  .testimonio-content {
+    padding: 2rem 1rem;
+  }
+  
+  blockquote p {
+    font-size: 1.1rem;
+  }
+  
+  .masonry-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-artesania {
+    padding: 3rem 1rem;
+  }
+  
+  .cta-artesania h3 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-artesania p {
+    font-size: 1rem;
+  }
+}

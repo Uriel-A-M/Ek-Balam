@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Contacta con la comunidad de Ek-Balam para visitarnos, colaborar o apoyar nuestros proyectos">
+  <meta name="description"
+    content="Contacta con la comunidad de Ek-Balam para visitarnos, colaborar o apoyar nuestros proyectos">
   <title>Contacto - Comunidad Ek-Balam</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/form.css">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body class="page-wrapper">
   <nav class="navbar">
     <div class="navbar-logo">
       <a href="index.html" class="navbar-logo">
-  <img src="images/logo_chido.png" alt="Logo Ek-Balam" class="logo">
-  <span class="logo-text">Ek-Balam</span>
-</a>
+        <img src="images/logo_chido.png" alt="Logo Ek-Balam" class="logo">
+        <span class="logo-text">Ek-Balam</span>
+      </a>
 
     </div>
     <div class="navbar-links">
@@ -47,7 +52,8 @@
       <div class="formulario-container">
         <div class="formulario-intro">
           <h2 class="section-title">Escríbenos</h2>
-          <p>¿Tienes preguntas sobre nuestra comunidad, deseas visitarnos o colaborar con nuestros proyectos? Completa este formulario y nos pondremos en contacto contigo.</p>
+          <p>¿Tienes preguntas sobre nuestra comunidad, deseas visitarnos o colaborar con nuestros proyectos? Completa
+            este formulario y nos pondremos en contacto contigo.</p>
           <div class="contacto-info">
             <div class="info-item">
               <i class="fas fa-envelope"></i>
@@ -63,75 +69,75 @@
             </div>
           </div>
         </div>
-        
-<form class="formulario-contacto" id="miFormulario" action="https://formspree.io/f/mblyoolg" method="POST">
-    <!-- Nombre -->
-    <div class="form-group">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" name="nombre" required>
-        <span class="error-msg" id="error-nombre"></span>
-    </div>
 
-    <!-- Email -->
-    <div class="form-group">
-        <label for="email">Correo electrónico</label>
-        <input type="email" id="email" name="email" required>
-        <span class="error-msg" id="error-email"></span>
-    </div>
+        <form class="formulario-contacto" id="miFormulario" action="https://formspree.io/f/mblyoolg" method="POST">
+          <!-- Nombre -->
+          <div class="form-group">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <span class="error-msg" id="error-nombre"></span>
+          </div>
 
-    <!-- Teléfono -->
-    <div class="form-group">
-        <label for="telefono">Teléfono (opcional)</label>
-        <input type="tel" id="telefono" name="telefono">
-        <span class="error-msg" id="error-telefono"></span>
-    </div>
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-msg" id="error-email"></span>
+          </div>
 
-    <!-- Asunto -->
-    <div class="form-group">
-        <label for="asunto">Asunto</label>
-        <select id="asunto" name="asunto" required>
-            <option value="" disabled selected>Selecciona una opción</option>
-            <option value="visita">Visitar la comunidad</option>
-            <option value="artesanias">Artesanías</option>
-            <option value="voluntariado">Voluntariado</option>
-            <option value="donacion">Donación</option>
-            <option value="proyectos">Información sobre proyectos</option>
-            <option value="otro">Otro</option>
-        </select>
-        <span class="error-msg" id="error-asunto"></span>
-    </div>
+          <!-- Teléfono -->
+          <div class="form-group">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono">
+            <span class="error-msg" id="error-telefono"></span>
+          </div>
 
-    <!-- Mensaje -->
-    <div class="form-group">
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        <span class="error-msg" id="error-mensaje"></span>
-    </div>
+          <!-- Asunto -->
+          <div class="form-group">
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="visita">Visitar la comunidad</option>
+              <option value="artesanias">Artesanías</option>
+              <option value="voluntariado">Voluntariado</option>
+              <option value="donacion">Donación</option>
+              <option value="proyectos">Información sobre proyectos</option>
+              <option value="otro">Otro</option>
+            </select>
+            <span class="error-msg" id="error-asunto"></span>
+          </div>
 
-    <!-- Ocultos -->
-    <!-- <input type="hidden" name="_subject" value="Nuevo mensaje de contacto"> -->
-    <input type="hidden" name="_language" value="es">
-    <input type="text" name="_gotcha" style="display:none">
+          <!-- Mensaje -->
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <span class="error-msg" id="error-mensaje"></span>
+          </div>
 
-    <!-- Botón -->
-    <button type="submit" class="btn-enviar">
-        Enviar mensaje <i class="fas fa-paper-plane"></i>
-    </button>
-</form>
+          <!-- Ocultos -->
+          <!-- <input type="hidden" name="_subject" value="Nuevo mensaje de contacto"> -->
+          <input type="hidden" name="_language" value="es">
+          <input type="text" name="_gotcha" style="display:none">
+
+          <!-- Botón -->
+          <button type="submit" class="btn-enviar">
+            Enviar mensaje <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
 
 
-    
+
         <!-- Popup de agradecimiento -->
         <div class="popup-overlay" id="popupGracias">
-            <div class="popup-content">
-                <span class="popup-close" id="cerrarPopup">&times;</span>
-                <div class="popup-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <h2>¡Gracias por tu mensaje!</h2>
-                <p>Hemos recibido tu información correctamente. Nos pondremos en contacto contigo muy pronto.</p>
-                <button class="btn-enviar" id="aceptarPopup">Aceptar</button>
+          <div class="popup-content">
+            <span class="popup-close" id="cerrarPopup">&times;</span>
+            <div class="popup-icon">
+              <i class="fas fa-check-circle"></i>
             </div>
+            <h2>¡Gracias por tu mensaje!</h2>
+            <p>Hemos recibido tu información correctamente. Nos pondremos en contacto contigo muy pronto.</p>
+            <button class="btn-enviar" id="aceptarPopup">Aceptar</button>
+          </div>
         </div>
     </section>
 
@@ -139,7 +145,10 @@
       <h2 class="section-title">Encuéntranos</h2>
       <div class="ubicacion-container">
         <div class="mapa">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.4434623565558!2d-88.14740201441518!3d20.89447084623436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5182cb7d48da3d%3A0x76e5f31c73021911!2sEscuela%20Secundaria%20Comunitaria%20Jos%C3%A9%20Vasconcelos!5e0!3m2!1ses-419!2smx!4v1744853667718!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3727.4434623565558!2d-88.14740201441518!3d20.89447084623436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5182cb7d48da3d%3A0x76e5f31c73021911!2sEscuela%20Secundaria%20Comunitaria%20Jos%C3%A9%20Vasconcelos!5e0!3m2!1ses-419!2smx!4v1744853667718!5m2!1ses-419!2smx"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="como-llegar">
           <h3>¿Cómo llegar a Ek-Balam?</h3>
@@ -147,21 +156,24 @@
             <i class="fas fa-car"></i>
             <div>
               <h4>En automóvil</h4>
-              <p>Desde Mérida, toma la carretera federal 180 hacia Valladolid. Después de aproximadamente 2 horas, gira en la señalización hacia Ek-Balam.</p>
+              <p>Desde Mérida, toma la carretera federal 180 hacia Valladolid. Después de aproximadamente 2 horas, gira
+                en la señalización hacia Ek-Balam.</p>
             </div>
           </div>
           <div class="transporte-option">
             <i class="fas fa-bus"></i>
             <div>
               <h4>En autobús</h4>
-              <p>Las líneas de autobuses ADO y Oriente ofrecen servicio desde Mérida y Valladolid hasta el pueblo de Temozón, desde donde puedes tomar un taxi colectivo.</p>
+              <p>Las líneas de autobuses ADO y Oriente ofrecen servicio desde Mérida y Valladolid hasta el pueblo de
+                Temozón, desde donde puedes tomar un taxi colectivo.</p>
             </div>
           </div>
           <div class="transporte-option">
             <i class="fas fa-plane"></i>
             <div>
               <h4>Desde el aeropuerto</h4>
-              <p>El aeropuerto más cercano es el de Mérida (MID). Desde allí puedes rentar un auto o tomar un autobús hacia Valladolid.</p>
+              <p>El aeropuerto más cercano es el de Mérida (MID). Desde allí puedes rentar un auto o tomar un autobús
+                hacia Valladolid.</p>
             </div>
           </div>
         </div>
@@ -174,62 +186,35 @@
           <i class="fas fa-hands-helping"></i>
         </div>
         <h3>Voluntariado</h3>
-        <p>Únete a nuestro equipo de voluntarios y contribuye con tus habilidades en educación, construcción, arte o proyectos comunitarios.</p>
-        <a href="voluntariado.html" class="btn-opcion">Más información</a>
+        <p>Únete a nuestro equipo de voluntarios y contribuye con tus habilidades en educación, construcción, arte o
+          proyectos comunitarios.</p>
+        <a href="#miFormulario" class="btn-opcion">Más información</a>
       </div>
-      
+
       <div class="opcion-card">
         <div class="opcion-icon">
           <i class="fas fa-gift"></i>
         </div>
         <h3>Donaciones</h3>
-        <p>Tu apoyo económico nos ayuda a mantener nuestros proyectos educativos, culturales y de desarrollo comunitario.</p>
-        <a href="donaciones.html" class="btn-opcion">Cómo donar</a>
+        <p>Tu apoyo económico nos ayuda a mantener nuestros proyectos educativos, culturales y de desarrollo
+          comunitario.</p>
+        <a href="#miFormulario" class="btn-opcion">Cómo donar</a>
       </div>
-      
+
       <div class="opcion-card">
         <div class="opcion-icon">
           <i class="fas fa-calendar-alt"></i>
         </div>
         <h3>Visítanos</h3>
         <p>Conoce nuestra comunidad, participa en nuestras tradiciones y vive la experiencia de Ek-Balam.</p>
-        <a href="visitas.html" class="btn-opcion">Programar visita</a>
-      </div>
-    </section>
-
-    <section class="contacto-testimonios">
-      <h2 class="section-title">Lo que dicen sobre nosotros</h2>
-      <div class="testimonios-container">
-        <div class="testimonio-card">
-          <div class="testimonio-texto">
-            <blockquote>
-              "Gracias a la escuela secundaria, hoy estudio Ingeniería en Sistemas Computacionales y puedo contribuir al desarrollo de mi comunidad. Estoy orgulloso de mis raíces y de lo que hemos logrado juntos."
-            </blockquote>
-            <cite>- Uriel Ay Mena, Egresado de la SECOM</cite>
-          </div>
-          <div class="testimonio-imagen">
-            <img src="images/uriel.jpg" alt="Uriel Ay Mena">
-          </div>
-        </div>
-        
-        <div class="testimonio-card reverse">
-          <div class="testimonio-texto">
-            <blockquote>
-              "Como voluntaria en Ek-Balam, he aprendido más de lo que he enseñado. La calidez de su gente y la riqueza de su cultura son incomparables."
-            </blockquote>
-            <cite>- Ana Martínez, Voluntaria</cite>
-          </div>
-          <div class="testimonio-imagen">
-            <img src="images/testimonio-voluntaria.jpg" alt="Ana Martínez">
-          </div>
-        </div>
+        <a href="#miFormulario" class="btn-opcion">Programar visita</a>
       </div>
     </section>
 
     <section class="contacto-redes">
       <h2 class="section-title">Síguenos en redes sociales</h2>
       <p>Mantente al día con nuestras actividades, eventos y proyectos comunitarios.</p>
-      
+
       <div class="redes-container">
         <a href="#" class="red-social facebook">
           <i class="fab fa-facebook-f"></i>
@@ -251,38 +236,40 @@
     </section>
   </main>
 
-<footer>
-  <div class="footer-content">
-    <div class="footer-section">
-      <img src="images/logo_chido.png" alt="Logo Ek-Balam" class="footer-logo">
-      <p class="footer-tagline">"El lugar donde el Jaguar Negro guarda su esencia"</p>
-    </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="images/logo_chido.png" alt="Logo Ek-Balam" class="footer-logo">
+        <p class="footer-tagline">"El lugar donde el Jaguar Negro guarda su esencia"</p>
+      </div>
 
-    <div class="footer-section contacto">
-      <h3>Contacto</h3>
-      <address>
-        <p><i class="fas fa-envelope"></i> comunidad.ekbalam@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +52 999 123 4567</p>
-        <p><i class="fas fa-map-marker-alt"></i> Ek-Balam, Yucatán, México</p>
-      </address>
-    </div>
+      <div class="footer-section contacto">
+        <h3>Contacto</h3>
+        <address>
+          <p><i class="fas fa-envelope"></i> comunidad.ekbalam@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +52 999 123 4567</p>
+          <p><i class="fas fa-map-marker-alt"></i> Ek-Balam, Yucatán, México</p>
+        </address>
+      </div>
 
-    <div class="footer-section redes">
-      <h3>Síguenos</h3>
-      <div class="social-links">
-        <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@comunidad_ek-balam?si=OfKnM-7O6Wvcr78D" aria-label="YouTube" class="social-icon"><i class="fab fa-youtube"></i></a>
+      <div class="footer-section redes">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@comunidad_ek-balam?si=OfKnM-7O6Wvcr78D" aria-label="YouTube"
+            class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Comunidad Ek-Balam. Todos los derechos reservados.</p>
-  </div>
-</footer>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Comunidad Ek-Balam. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
   <script src="js/contacto.js"></script>""
 </body>
+
 </html>
